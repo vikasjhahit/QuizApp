@@ -1,0 +1,11 @@
+<nav class="blue-grey">
+    <div class="nav-wrapper">
+      <a (click)="ClickHome()" class="brand-logo left" style="cursor: pointer;padding-left: 30px">Quiz Home</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <a *ngIf="isLogin" (click)="SignOut()" style="cursor: pointer;padding-right: 50px">LOG OUT</a>
+          <a *ngIf="!isLogin" (click)="ClickLogin()" style="cursor: pointer;padding-right: 50px">LOGIN</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

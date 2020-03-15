@@ -1,0 +1,18 @@
+.cls-header{
+    background-color: #6b6d6e !important;
+    height: 100px !important;
+}
+
+.header-back-to-site{
+float: left;
+margin-right: 128px;
+font-weight: 200px;
+font-size: 27px;
+}
+
+.header-logout{
+float: right;
+margin-right: 128px;
+font-weight: 200px;
+font-size: 27px;
+}

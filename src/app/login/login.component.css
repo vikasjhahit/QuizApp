@@ -1,0 +1,19 @@
+.btn-class-Start{
+    padding-left: 220px;
+    padding-right: 240px;
+}
+.row{
+    margin-bottom: 0px
+}
+.alert-msg-email-login{
+    padding-left: 45px;
+    padding-bottom: 15px; 
+    color: darkred;
+    /* display: none; */
+}
+.alert-msg-email-password{
+    padding-left: 45px; 
+    color: darkred;
+    /* display: none; */
+}
+

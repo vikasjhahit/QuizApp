@@ -1,0 +1,19 @@
+.btn-class-Start{
+    padding-left: 240px;
+    padding-right: 200px;
+}
+.btn-class-Start-account{
+    padding-left: 240px;
+    padding-right: 200px;   
+    padding-bottom: 20px;
+}
+.cls-InstAccess{
+    opacity: initial;
+    position: initial;
+    pointer-events: auto;
+}
+.cls-InstAccess-div{
+    /* margin-left: 180px; */
+    border: 1px solid darkred;
+    
+}

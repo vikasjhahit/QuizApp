@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<h2 style="text-align:center" *ngIf="isVikas">Admin Profile Card</h2>
+<h2 style="text-align:center" *ngIf !="isVikas">User Profile Card</h2>
+
+<div class="card" *ngIf="isVikas">
+    <img class="card-img-top" 
+    style="margin:0 auto;width:100%;height:200px;"
+    src="/assets/image/vikas.jpg" 
+    alt="CEO" />
+  <h1>Vikas</h1>
+  <p class="title">CEO & Founder, Online Quiz Management System</p>
+  <p>Haldia Institute of Technology</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><button>Contact</button></p>
+</div>
+
+<div class="card" *ngIf="!isVikas">
+    <img class="card-img-top" 
+    style="margin:0 auto;width:100%;height:200px;"
+    src="/assets/image/user.png" 
+    alt="Preserve your moments" />
+  <h1>{{Name}}</h1>
+  <p class="title" *ngIf="AccountTypeID === 2">Student</p>
+  <p class="title" *ngIf="AccountTypeID === 4">Instructor</p>
+  <p>Harvard University</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+</div>
+
+<div *ngIf="AccountTypeID === 2">
+  <button class="btn-large" type="submit" (click)="onClickStartQuiz()" style="margin-left: 600px;">
+    Start Quiz
+  </button>
+</div>
+<div *ngIf="AccountTypeID === 4">
+  <button class="btn-large" type="submit" (click)="onClickGradebook()" style="margin-left: 600px;">
+    USERS GRADEBOOK
+  </button>
+</div>

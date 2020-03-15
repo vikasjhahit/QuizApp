@@ -1,0 +1,69 @@
+<div class="row">
+  <div class="col s6 offset-s3">
+    <div class="card">
+      <div class="col s6">
+        <a href="#" (click)="onGoToHomePage()">
+            <i class="large material-icons" style="font-size: 30px;">arrow_back</i>Back to Site
+        </a>
+        <h2>Quiz Registration</h2>
+      </div>
+      <div class="col s6">
+        <img src="/assets/image/register.jpg" style="width:250px;height:250px;" class="offset-s3">
+      </div>
+      <div class="card-content">
+          <form #registerForm="ngForm" (ngSubmit)="OnSubmitRegister(Name.value,Email.value,Password.value, IsChecked.value)">
+            <div class="row">
+                   <b>Complete the information below to create your account</b> 
+                   <div class="input-field col s5 cls-InstAccess-div" align="center" style="margin-left: 180px;">
+                  <!-- <input type="checkbox" class="cls-InstAccess" [ngModel]="checkboxFlag" name="checkboxFlag" #checkboxFlag  > -->
+                 <!-- <input  type="checkbox" [(ngModel)]="theCheckbox" name="IsChecked" [value]="theCheckbox" data-md-icheck (change)="toggleVisibility($event)" style="position: inherit;opacity: inherit;"/> -->
+                 
+                   <!-- <input type="checkbox" name="IsChecked" [(ngModel)]="IsChecked"  style="position: inherit;opacity: inherit;"/> -->
+                    <input type="checkbox" name="IsChecked" #IsChecked ngModel style="position: inherit;opacity: inherit;pointer-events: auto"/>
+                    <p>Check here for Instructor Access</p>
+                
+                </div>
+              </div>
+              <div class="row"> 
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" name="Name" #Name ngModel required>
+                <label>Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">mail_outline</i>
+                <input type="text" name="Email" #Email ngModel required [pattern]="emailPattern">
+                <label>Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">vpn_key</i>
+                <input type="password" name="Password" #Password ngModel required>
+                <label>Password</label>
+              </div>
+            </div>
+            <div class="" style="color: red;">
+                <strong>{{ErrorMessage}}</strong>
+            </div>
+            <div class="row">
+              <div class="btn-class-Start-account">
+                <button class="btn-large btn-submit" type="submit" [disabled]="!registerForm.valid">Create Account</button>
+              </div>
+              <div class="btn-class-Start"> 
+                  <button class="btn-large btn-submit" type="reset" >Clear</button>
+              </div>
+            </div>
+            <div class="row">
+                <h6>By Creating an account, you agree to Quiz application's
+                   <a href="#">Conditions of Use </a> and <a href="#">End User's Agreement</a></h6>
+              </div>
+              
+              <!-- {{registerForm.value | json}} -->
+          </form>
+      </div>
+    </div>
+  </div>
+</div>

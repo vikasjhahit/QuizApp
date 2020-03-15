@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="container" style="margin-top:10px">
+  <h2>User Gradebook</h2>
+  <table border="0" cellspacing="0" cellpadding="0" width="100%" class="responsive-table desktop">
+    <thead>
+      <tr>
+        <th width="20%" > Name </th>
+        <th width="25%">Email </th>
+        <th width="20%">Score</th>
+        <th width="20%"> Attempts </th>
+        <th width="20%"> Total Time Spent </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="6" style="text-align: center" *ngIf="totalcount === 0">
+            No Gradebook Records...
+        </td>
+      </tr>
+      <tr *ngFor="let data of UserGradebook">
+        <td data-title="Name">{{data.Name}}</td>
+        <td data-title="Email">{{data.Email}}</td>
+        <td data-title="Score" >{{data.Score}}</td>
+        <td data-title="Score" >{{data.Attempts}}</td>
+        <td data-title="TimeSpent">{{data.TimeSpent}}</td>
+       </tr>
+
+
+    </tbody>
+  </table> 
+  </div>
